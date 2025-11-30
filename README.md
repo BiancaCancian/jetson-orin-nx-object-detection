@@ -29,7 +29,7 @@ This project was developed and tested using the following environment:
 
 For this specific inference example we use YOLOv8 (Ultralytics). Inference runs on the GPU using the compute stack versions listed above.
 
-PyTorch and Torchvision on Jetson must match the JetPack version. Use Jetson-compatible wheels (generic PyTorch wheels will not work on aarch64).
+PyTorch and Torchvision on Jetson must match the JetPack version. Use Jetson compatible wheels (generic PyTorch wheels will not work on aarch64).
 
 ## **Quick Start**
 
