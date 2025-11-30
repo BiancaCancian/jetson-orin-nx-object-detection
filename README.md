@@ -33,40 +33,64 @@ PyTorch and Torchvision on Jetson must match the JetPack version. Use Jetson-com
 
 ## **Quick Start**
 
-1. Create the environment:
+---
 
+### **1. Create the environment**
+```bash
 sudo apt update
 sudo apt install -y python3-pip python3-venv git libopencv-dev v4l-utils
 
 python3 -m venv yoloenv
 source yoloenv/bin/activate
 pip install --upgrade pip
+```
 
-2. Install Ultralytics (YOLOv8):
+---
 
+### **2. Install Ultralytics (YOLOv8)**
+```bash
 pip install ultralytics
+```
 
-3. Install PyTorch compatible with your CUDA version  
-Example for CUDA 12.1 (JetPack 6.x):
+---
 
+### **3. Install PyTorch compatible with your CUDA version**
+Example for **CUDA 12.1 (JetPack 6.x)**:
+```bash
 pip install torch==2.9.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
 
-4. Download a YOLO model:
+---
 
+### **4. Download a YOLO model**
+```bash
 yolo download model=yolov8n.pt
+```
 
-5. Fix webcam window if it does not open:
+---
 
+### **5. Fix webcam window if it does not open**
+```bash
 pip uninstall -y opencv-python-headless
 pip install opencv-python
+```
 
-6. Run inference:
+---
 
+### **6. Run inference**
+```bash
 yolo predict model=yolov8n.pt source=0 show=True
+```
 
-7. Verify GPU usage:
+---
 
+### **7. Verify GPU usage**
+```bash
 jtop
+```
+
+
+
 
 
 
